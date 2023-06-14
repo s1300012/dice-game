@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 public class DiceGame{
-    public static void RandamDice() {
+    public static void RandamDice(String name) {
         System.out.println("Rolling dice...");
         Random random = new Random();
         int die1 = random.nextInt(6) + 1;
@@ -11,9 +11,9 @@ public class DiceGame{
         int totalValue = die1 + die2;
         System.out.println("Total value: " + totalValue);
         if (totalValue > 7) {
-            System.out.println("You won!");
+            System.out.println(name +" won!");
         } else {
-            System.out.println("You lost.");
+            System.out.println(name+" lost.");
         }
     }
         
@@ -23,6 +23,6 @@ public class DiceGame{
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
         System.out.println("Hello, " + name + "!");
-        RandamDice();
+        RandamDice(name);
     }
 }
